@@ -53,3 +53,46 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+cache*
+Backup*
+debug
+release
+
+*.crf
+*.htm
+*.build_log.htm
+*.dep
+*.axf
+*.uvguix.*
+
+
+# Игнорируем автогенерируемый файл компонентов RTE
+**/RTE/RTE_Components.h
+**/RTE/_*
+
+# Игнорируем временные файлы сборки Keil
+*.txt
+*.txt
+*.o
+*.d
+*.crf
+*.lnp
+*.axf
+*.htm
+*.build_log.htm
+*.dep
+*.manifest
+*.scvd
+_2i
+*.lst
+*.map
+
+# Игнорируем пользовательские настройки интерфейса Keil
+*.uvguix.*
+*.uv2.bak
+*.uv3.bak
+*.uv4.bak
+*.uvproj.bak
+*.uvopt.bak
+*.uvoptx
