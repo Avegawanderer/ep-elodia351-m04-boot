@@ -76,13 +76,9 @@ extern "C"
  * Global pre-processor symbols/macros ('#define')
  ******************************************************************************/
 
-
-
-
-
 /*! Chip module on-off define */
-#define DDL_ON                                      (1u)
-#define DDL_OFF                                     (0u)
+#define DDL_ON                     (1u)
+#define DDL_OFF                    (0u)
 
 /**
  *******************************************************************************
@@ -95,75 +91,73 @@ extern "C"
  ** \note DDL_UTILITY_ENABLE must be turned on(DDL_ON) if using Device Driver
  ** Library.
  ******************************************************************************/
-#define DDL_ICG_ENABLE                              (DDL_ON)
-#define DDL_UTILITY_ENABLE                          (DDL_ON)
+#define DDL_ICG_ENABLE             (DDL_ON)
+#define DDL_UTILITY_ENABLE         (DDL_ON)
 
-#define DDL_ADC_ENABLE                              (DDL_ON)
-#define DDL_AES_ENABLE                              (DDL_OFF)
-#define DDL_CAN_ENABLE                              (DDL_OFF)
-#define DDL_CLK_ENABLE                              (DDL_ON)
-#define DDL_CMP_ENABLE                              (DDL_OFF)
-#define DDL_CRC_ENABLE                              (DDL_OFF)
-#define DDL_DCU_ENABLE                              (DDL_OFF)
-#define DDL_DMAC_ENABLE                             (DDL_ON)
-#define DDL_EFM_ENABLE                              (DDL_ON)
-#define DDL_EMB_ENABLE                              (DDL_OFF)
-#define DDL_EVENT_PORT_ENABLE                       (DDL_OFF)
-#define DDL_EXINT_NMI_SWI_ENABLE                    (DDL_ON)
-#define DDL_GPIO_ENABLE                             (DDL_ON)
-#define DDL_HASH_ENABLE                             (DDL_OFF)
-#define DDL_I2C_ENABLE                              (DDL_ON)
-#define DDL_I2S_ENABLE                              (DDL_OFF)
-#define DDL_INTERRUPTS_ENABLE                       (DDL_ON)
-#define DDL_KEYSCAN_ENABLE                          (DDL_OFF)
-#define DDL_MPU_ENABLE                              (DDL_OFF)
-#define DDL_OTS_ENABLE                              (DDL_OFF)
-#define DDL_PWC_ENABLE                              (DDL_ON)
-#define DDL_QSPI_ENABLE                             (DDL_OFF)
-#define DDL_RMU_ENABLE                              (DDL_OFF)
-#define DDL_RTC_ENABLE                              (DDL_OFF)
-#define DDL_SDIOC_ENABLE                            (DDL_OFF)
-#define DDL_SPI_ENABLE                              (DDL_OFF)
-#define DDL_SRAM_ENABLE                             (DDL_ON)
-#define DDL_SWDT_ENABLE                             (DDL_OFF)
-#define DDL_TIMER0_ENABLE                           (DDL_ON)
-#define DDL_TIMER4_CNT_ENABLE                       (DDL_ON)
-#define DDL_TIMER4_EMB_ENABLE                       (DDL_ON)
-#define DDL_TIMER4_OCO_ENABLE                       (DDL_ON)
-#define DDL_TIMER4_PWM_ENABLE                       (DDL_ON)
-#define DDL_TIMER4_SEVT_ENABLE                      (DDL_OFF)
-#define DDL_TIMER6_ENABLE                           (DDL_ON)
-#define DDL_TIMERA_ENABLE                           (DDL_ON)
-#define DDL_TRNG_ENABLE                             (DDL_OFF)
-#define DDL_USART_ENABLE                            (DDL_ON)
-#define DDL_USBFS_ENABLE                            (DDL_OFF)
-#define DDL_WDT_ENABLE                              (DDL_OFF)
-
+#define DDL_ADC_ENABLE             (DDL_ON)
+#define DDL_AES_ENABLE             (DDL_OFF)
+#define DDL_CAN_ENABLE             (DDL_OFF)
+#define DDL_CLK_ENABLE             (DDL_ON)
+#define DDL_CMP_ENABLE             (DDL_OFF)
+#define DDL_CRC_ENABLE             (DDL_OFF)
+#define DDL_DCU_ENABLE             (DDL_OFF)
+#define DDL_DMAC_ENABLE            (DDL_ON)
+#define DDL_EFM_ENABLE             (DDL_ON)
+#define DDL_EMB_ENABLE             (DDL_OFF)
+#define DDL_EVENT_PORT_ENABLE      (DDL_OFF)
+#define DDL_EXINT_NMI_SWI_ENABLE   (DDL_ON)
+#define DDL_GPIO_ENABLE            (DDL_ON)
+#define DDL_HASH_ENABLE            (DDL_OFF)
+#define DDL_I2C_ENABLE             (DDL_ON)
+#define DDL_I2S_ENABLE             (DDL_OFF)
+#define DDL_INTERRUPTS_ENABLE      (DDL_ON)
+#define DDL_KEYSCAN_ENABLE         (DDL_OFF)
+#define DDL_MPU_ENABLE             (DDL_OFF)
+#define DDL_OTS_ENABLE             (DDL_OFF)
+#define DDL_PWC_ENABLE             (DDL_ON)
+#define DDL_QSPI_ENABLE            (DDL_OFF)
+#define DDL_RMU_ENABLE             (DDL_OFF)
+#define DDL_RTC_ENABLE             (DDL_OFF)
+#define DDL_SDIOC_ENABLE           (DDL_OFF)
+#define DDL_SPI_ENABLE             (DDL_OFF)
+#define DDL_SRAM_ENABLE            (DDL_ON)
+#define DDL_SWDT_ENABLE            (DDL_OFF)
+#define DDL_TIMER0_ENABLE          (DDL_ON)
+#define DDL_TIMER4_CNT_ENABLE      (DDL_ON)
+#define DDL_TIMER4_EMB_ENABLE      (DDL_ON)
+#define DDL_TIMER4_OCO_ENABLE      (DDL_ON)
+#define DDL_TIMER4_PWM_ENABLE      (DDL_ON)
+#define DDL_TIMER4_SEVT_ENABLE     (DDL_OFF)
+#define DDL_TIMER6_ENABLE          (DDL_ON)
+#define DDL_TIMERA_ENABLE          (DDL_ON)
+#define DDL_TRNG_ENABLE            (DDL_OFF)
+#define DDL_USART_ENABLE           (DDL_ON)
+#define DDL_USBFS_ENABLE           (DDL_OFF)
+#define DDL_WDT_ENABLE             (DDL_OFF)
 
 /*! Midware module on-off define */
-#define MW_ON                                       (1u)
-#define MW_OFF                                      (0u)
+#define MW_ON                      (1u)
+#define MW_OFF                     (0u)
 
 /**
  *******************************************************************************
  ** \brief This is the list of Midware modules to use
  ** Select the modules you need to use to MW_ON.
  ******************************************************************************/
-#define MW_SD_CARD_ENABLE                           (MW_OFF)
-#define MW_FS_ENABLE                                (MW_OFF)
-#define MW_W25QXX_ENABLE                            (MW_OFF)
-#define MW_WM8731_ENABLE                            (MW_OFF)
-
+#define MW_SD_CARD_ENABLE          (MW_OFF)
+#define MW_FS_ENABLE               (MW_OFF)
+#define MW_W25QXX_ENABLE           (MW_OFF)
+#define MW_WM8731_ENABLE           (MW_OFF)
 
 /* BSP on-off define */
-#define BSP_ON                                      (1u)
-#define BSP_OFF                                     (0u)
+#define BSP_ON                     (1u)
+#define BSP_OFF                    (0u)
 
 /**
  * @brief The following is a list of currently supported BSP boards.
  */
-#define BSP_EV_HC32F460_LQFP100_V1                  (1u)
-#define BSP_EV_HC32F460_LQFP100_V2                  (2u)
+#define BSP_EV_HC32F460_LQFP100_V1 (1u)
+#define BSP_EV_HC32F460_LQFP100_V2 (2u)
 
 /**
  * @brief The macro BSP_EV_HC32F460 is used to specify the BSP board currently
@@ -172,17 +166,17 @@ extern "C"
  * @note  If there is no supported BSP board or the BSP function is not used,
  * the value needs to be set to BSP_EV_HC32F460.
  */
-#define BSP_EV_HC32F460                             (BSP_EV_HC32F460)
+#define BSP_EV_HC32F460            (BSP_EV_HC32F460)
 
-/*******************************************************************************
+    /*******************************************************************************
  * Global variable definitions ('extern')
  ******************************************************************************/
 
-/*******************************************************************************
+    /*******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
 
-//@} // DdlConfigGroup
+    //@} // DdlConfigGroup
 
 #ifdef __cplusplus
 }

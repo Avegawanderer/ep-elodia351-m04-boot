@@ -1,0 +1,28 @@
+#ifndef __INTF_SPK_H__
+#define __INTF_SPK_H__
+
+#include "dh_type.h"
+
+#define AUDIO_DMR    //GPIO_DRV_Reset(MAP_AUDIO_SW_PIN);
+#define AUDIO_FM     //GPIO_DRV_Set(MAP_AUDIO_SW_PIN);
+
+DH_VOID SPK_INTF_GPIOInit(DH_VOID);
+
+DH_VOID SPK_INTF_Open(DH_VOID);
+
+DH_VOID SPK_INTF_Close(DH_VOID);
+
+DH_U8 SPK_INTF_IsOpen(DH_VOID);
+
+//H Mute
+DH_VOID MIC_INTF_Open(DH_VOID);
+DH_VOID MIC_INTF_Mute(DH_VOID);
+
+DH_VOID SPK_INTF_OpenTone(DH_VOID);
+DH_VOID SPK_INTF_CloseTone(DH_VOID);
+
+//bluetooth
+DH_VOID SPK_INTF_OpenBTChn(DH_VOID);
+DH_VOID SPK_INTF_CloseBTChn(DH_VOID);
+
+#endif

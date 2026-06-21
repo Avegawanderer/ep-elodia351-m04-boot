@@ -373,7 +373,7 @@
               <MiscControls>--diag_suppress=186,66</MiscControls>
               <Define>__DEBUG,USE_DEVICE_DRIVER_LIB,HC32F460</Define>
               <Undefine></Undefine>
-              <IncludePath>..\source;..\source\BLL\BLL_PC;..\drivers\bsp\ev_hc32f460_lqfp100_v2;..\driver\inc;..\mcu\common;..\source\BLL\BLL_RF;..\source\BLL\codesw;..\source\BLL;..\source\BLL\sound;..\source\adc;..\source\BLL\SLEEPMODE</IncludePath>
+              <IncludePath>..\source;..\source\BLL\BLL_PC;..\drivers\bsp\ev_hc32f460_lqfp100_v2;..\driver\inc;..\mcu\common;..\source\BLL\BLL_RF;..\source\BLL\codesw;..\source\BLL;..\source\BLL\sound;..\source\intf;..\source\BLL\SLEEPMODE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -439,7 +439,7 @@
             <File>
               <FileName>intf_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_usart.c</FilePath>
+              <FilePath>..\source\intf\intf_usart.c</FilePath>
             </File>
             <File>
               <FileName>BLL_CLK.c</FileName>
@@ -449,7 +449,7 @@
             <File>
               <FileName>INTF_Key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\INTF_Key.c</FilePath>
+              <FilePath>..\source\intf\INTF_Key.c</FilePath>
             </File>
             <File>
               <FileName>lib_print.c</FileName>
@@ -459,7 +459,7 @@
             <File>
               <FileName>INTF_LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\INTF_LED.c</FilePath>
+              <FilePath>..\source\intf\INTF_LED.c</FilePath>
             </File>
             <File>
               <FileName>BLL_PC.c</FileName>
@@ -469,12 +469,12 @@
             <File>
               <FileName>intf_AT24C08.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_AT24C08.c</FilePath>
+              <FilePath>..\source\intf\intf_AT24C08.c</FilePath>
             </File>
             <File>
               <FileName>intf_inner_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_inner_flash.c</FilePath>
+              <FilePath>..\source\intf\intf_inner_flash.c</FilePath>
             </File>
             <File>
               <FileName>24cxx.c</FileName>
@@ -1078,7 +1078,7 @@
               <MiscControls>--diag_suppress=186,66</MiscControls>
               <Define>HC32F46x,USE_DEVICE_DRIVER_LIB</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\mcu\common;..\source;..\..\..\driver\inc;</IncludePath>
+              <IncludePath>..\..\..\mcu\common;..\source;..\source\intf;..\..\..\driver\inc;</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1144,7 +1144,7 @@
             <File>
               <FileName>intf_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_usart.c</FilePath>
+              <FilePath>..\source\intf\intf_usart.c</FilePath>
             </File>
             <File>
               <FileName>BLL_CLK.c</FileName>
@@ -1154,7 +1154,7 @@
             <File>
               <FileName>INTF_Key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\INTF_Key.c</FilePath>
+              <FilePath>..\source\intf\INTF_Key.c</FilePath>
             </File>
             <File>
               <FileName>lib_print.c</FileName>
@@ -1164,7 +1164,7 @@
             <File>
               <FileName>INTF_LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\INTF_LED.c</FilePath>
+              <FilePath>..\source\intf\INTF_LED.c</FilePath>
             </File>
             <File>
               <FileName>BLL_PC.c</FileName>
@@ -1174,12 +1174,12 @@
             <File>
               <FileName>intf_AT24C08.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_AT24C08.c</FilePath>
+              <FilePath>..\source\intf\intf_AT24C08.c</FilePath>
             </File>
             <File>
               <FileName>intf_inner_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\adc\intf_inner_flash.c</FilePath>
+              <FilePath>..\source\intf\intf_inner_flash.c</FilePath>
             </File>
             <File>
               <FileName>24cxx.c</FileName>

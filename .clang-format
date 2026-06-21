@@ -1,0 +1,23 @@
+---
+BasedOnStyle: LLVM
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AlignTrailingComments: 'true'
+AllowShortBlocksOnASingleLine: 'true'
+AllowShortFunctionsOnASingleLine: All
+AllowShortLoopsOnASingleLine: 'true'
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Allman
+ColumnLimit: '0'
+IndentWidth: '4'
+IndentCaseLabels: 'true'
+Language: Cpp
+ReflowComments: 'false'
+SpacesBeforeTrailingComments: '4'
+TabWidth: '4'
+UseTab: Never
+
+SortIncludes: Never
+...

@@ -35,35 +35,33 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
-/**
+    /**
  * @addtogroup LL_Common
  * @{
  */
 
-/*******************************************************************************
+    /*******************************************************************************
  * Global type definitions ('typedef')
  ******************************************************************************/
-/**
+    /**
  * @defgroup LL_Common_Global_Types LL Common Global Types
  * @{
  */
 
-/**
+    /**
  * @brief Single precision floating point number (4 byte)
  */
-typedef float float32_t;
+    typedef float float32_t;
 
-/**
+    /**
  * @brief Double precision floating point number (8 byte)
  */
-typedef double float64_t;
+    typedef double float64_t;
 
-/**
+    /**
  * @brief Function pointer type to void/void function
  */
-typedef void (*func_ptr_t)(void);
-
-
+    typedef void (*func_ptr_t)(void);
 
 /**
  * @}
@@ -82,18 +80,18 @@ typedef void (*func_ptr_t)(void);
  * @{
  */
 #ifndef __UNUSED
-#define __UNUSED                        __attribute__((unused))
+#define __UNUSED __attribute__((unused))
 #endif /* __UNUSED */
 
-#if defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+#if defined(__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
 #ifndef __WEAKDEF
-#define __WEAKDEF                   __attribute__((weak))
+#define __WEAKDEF __attribute__((weak))
 #endif /* __WEAKDEF */
 #ifndef __ALIGN_BEGIN
-#define __ALIGN_BEGIN               __attribute__((aligned(4)))
+#define __ALIGN_BEGIN __attribute__((aligned(4)))
 #endif /* __ALIGN_BEGIN */
 #ifndef __NOINLINE
-#define __NOINLINE                  __attribute__((noinline))
+#define __NOINLINE __attribute__((noinline))
 #endif /* __NOINLINE */
 /* RAM functions are defined using the toolchain options.
 Functions that are executed in RAM should reside in a separate source module.
@@ -103,65 +101,65 @@ area of a module to a memory space in physical RAM. */
 #define __RAM_FUNC
 #endif /* __RAM_FUNC */
 #ifndef __NO_INIT
-#define __NO_INIT                   __attribute__((section(".bss.noinit")))
-#endif /* __NO_INIT */
-#elif defined ( __GNUC__ ) && !defined (__CC_ARM) /*!< GNU Compiler */
+#define __NO_INIT __attribute__((section(".bss.noinit")))
+#endif                                        /* __NO_INIT */
+#elif defined(__GNUC__) && !defined(__CC_ARM) /*!< GNU Compiler */
 #ifndef __WEAKDEF
-#define __WEAKDEF                   __attribute__((weak))
+#define __WEAKDEF __attribute__((weak))
 #endif /* __WEAKDEF */
 #ifndef __ALIGN_BEGIN
-#define __ALIGN_BEGIN               __attribute__((aligned (4)))
+#define __ALIGN_BEGIN __attribute__((aligned(4)))
 #endif /* __ALIGN_BEGIN */
 #ifndef __NOINLINE
-#define __NOINLINE                  __attribute__((noinline))
+#define __NOINLINE __attribute__((noinline))
 #endif /* __NOINLINE */
 #ifndef __RAM_FUNC
-#define __RAM_FUNC                  __attribute__((long_call, section(".ramfunc")))
+#define __RAM_FUNC __attribute__((long_call, section(".ramfunc")))
 /* Usage: __RAM_FUNC void foo(void) */
 #endif /* __RAM_FUNC */
 #ifndef __NO_INIT
-#define __NO_INIT                   __attribute__((section(".noinit")))
-#endif /* __NO_INIT */
-#elif defined (__ICCARM__)              /*!< IAR Compiler */
+#define __NO_INIT __attribute__((section(".noinit")))
+#endif                    /* __NO_INIT */
+#elif defined(__ICCARM__) /*!< IAR Compiler */
 #ifndef __WEAKDEF
-#define __WEAKDEF                   __weak
+#define __WEAKDEF __weak
 #endif /* __WEAKDEF */
 #ifndef __ALIGN_BEGIN
-#define __ALIGN_BEGIN               _Pragma("data_alignment=4")
+#define __ALIGN_BEGIN _Pragma("data_alignment=4")
 #endif /* __ALIGN_BEGIN */
 #ifndef __NOINLINE
-#define __NOINLINE                  _Pragma("optimize = no_inline")
+#define __NOINLINE _Pragma("optimize = no_inline")
 #endif /* __NOINLINE */
 #ifndef __RAM_FUNC
-#define __RAM_FUNC                  __ramfunc
+#define __RAM_FUNC __ramfunc
 #endif /* __RAM_FUNC */
 #ifndef __NO_INIT
-#define __NO_INIT                   __no_init
-#endif /* __NO_INIT */
-#elif defined (__CC_ARM)                /*!< ARM Compiler */
+#define __NO_INIT __no_init
+#endif                  /* __NO_INIT */
+#elif defined(__CC_ARM) /*!< ARM Compiler */
 #ifndef __WEAKDEF
-#define __WEAKDEF                   __attribute__((weak))
+#define __WEAKDEF __attribute__((weak))
 #endif /* __WEAKDEF */
 #ifndef __ALIGN_BEGIN
-#define __ALIGN_BEGIN               __align(4)
+#define __ALIGN_BEGIN __align(4)
 #endif /* __ALIGN_BEGIN */
 #ifndef __NOINLINE
-#define __NOINLINE                  __attribute__((noinline))
+#define __NOINLINE __attribute__((noinline))
 #endif /* __NOINLINE */
 #ifndef __NO_INIT
-#define __NO_INIT                   __attribute__((section(".bss.noinit"), zero_init))
+#define __NO_INIT __attribute__((section(".bss.noinit"), zero_init))
 #endif /* __NO_INIT */
 /* RAM functions are defined using the toolchain options.
 Functions that are executed in RAM should reside in a separate source module.
 Using the 'Options for File' dialog you can simply change the 'Code / Const'
 area of a module to a memory space in physical RAM. */
 #ifndef __RAM_FUNC
-#define __RAM_FUNC                  __attribute__((section("RAMCODE")))
+#define __RAM_FUNC __attribute__((section("RAMCODE")))
 #endif /* __RAM_FUNC */
 /* Suppress warning message: extended constant initialiser used */
 #pragma diag_suppress 1296
 #else
-#error  "unsupported compiler!!"
+#error "unsupported compiler!!"
 #endif
 /**
  * @}
@@ -181,10 +179,10 @@ area of a module to a memory space in physical RAM. */
 //#define ARRAY_SZ(x)                     ((sizeof(x)) / (sizeof((x)[0])))
 
 /* Returns the minimum value out of two values */
-#define LL_MIN(x, y)                    ((x) < (y) ? (x) : (y))
+#define LL_MIN(x, y)                         ((x) < (y) ? (x) : (y))
 
 /* Returns the maximum value out of two values */
-#define LL_MAX(x, y)                    ((x) > (y) ? (x) : (y))
+#define LL_MAX(x, y)                         ((x) > (y) ? (x) : (y))
 /**
  * @}
  */
@@ -201,9 +199,9 @@ area of a module to a memory space in physical RAM. */
  * @defgroup Check_Address_Align_Validity Check Address Align Validity
  * @{
  */
-#define IS_ADDR_ALIGN(addr, align)      (0UL == (((uint32_t)(addr)) & (((uint32_t)(align)) - 1UL)))
-#define IS_ADDR_ALIGN_HALFWORD(addr)    (0UL == (((uint32_t)(addr)) & 0x1UL))
-#define IS_ADDR_ALIGN_WORD(addr)        (0UL == (((uint32_t)(addr)) & 0x3UL))
+#define IS_ADDR_ALIGN(addr, align)           (0UL == (((uint32_t)(addr)) & (((uint32_t)(align)) - 1UL)))
+#define IS_ADDR_ALIGN_HALFWORD(addr)         (0UL == (((uint32_t)(addr)) & 0x1UL))
+#define IS_ADDR_ALIGN_WORD(addr)             (0UL == (((uint32_t)(addr)) & 0x3UL))
 /**
  * @}
  */
@@ -216,11 +214,11 @@ area of a module to a memory space in physical RAM. */
  * @defgroup Peripheral_Bit_Band Peripheral Bit Band
  * @{
  */
-#define __PERIPH_BIT_BAND_BASE          (0x42000000UL)
-#define __PERIPH_BASE                   (0x40000000UL)
-#define __REG_OFS(regAddr)              ((regAddr) - __PERIPH_BASE)
-#define __BIT_BAND_ADDR(regAddr, pos)   ((__REG_OFS(regAddr) << 5U) + ((uint32_t)(pos) << 2U) + __PERIPH_BIT_BAND_BASE)
-#define PERIPH_BIT_BAND(regAddr, pos)   (*(__IO uint32_t *)__BIT_BAND_ADDR((regAddr), (pos)))
+#define __PERIPH_BIT_BAND_BASE               (0x42000000UL)
+#define __PERIPH_BASE                        (0x40000000UL)
+#define __REG_OFS(regAddr)                   ((regAddr)-__PERIPH_BASE)
+#define __BIT_BAND_ADDR(regAddr, pos)        ((__REG_OFS(regAddr) << 5U) + ((uint32_t)(pos) << 2U) + __PERIPH_BIT_BAND_BASE)
+#define PERIPH_BIT_BAND(regAddr, pos)        (*(__IO uint32_t *)__BIT_BAND_ADDR((regAddr), (pos)))
 /**
  * @}
  */
@@ -229,17 +227,17 @@ area of a module to a memory space in physical RAM. */
  * @defgroup Generic_Error_Codes Generic Error Codes
  * @{
  */
-#define LL_OK                           (0)   /*!< No error */
-#define LL_ERR                          (-1)  /*!< Non-specific error code */
-#define LL_ERR_UNINIT                   (-2)  /*!< Module (or part of it) was not initialized properly */
-#define LL_ERR_INVD_PARAM               (-3)  /*!< Provided parameter is not valid */
-#define LL_ERR_INVD_MD                  (-4)  /*!< Operation not allowed in current mode */
-#define LL_ERR_NOT_RDY                  (-5)  /*!< A requested final state is not reached */
-#define LL_ERR_BUSY                     (-6)  /*!< A conflicting or requested operation is still in progress */
-#define LL_ERR_ADDR_ALIGN               (-7)  /*!< Address alignment does not match */
-#define LL_ERR_TIMEOUT                  (-8)  /*!< Time Out error occurred (e.g. I2C arbitration lost, Flash time-out, etc.) */
-#define LL_ERR_BUF_EMPTY                (-9)  /*!< Circular buffer can not be read because the buffer is empty */
-#define LL_ERR_BUF_FULL                 (-10) /*!< Circular buffer can not be written because the buffer is full */
+#define LL_OK                                (0)   /*!< No error */
+#define LL_ERR                               (-1)  /*!< Non-specific error code */
+#define LL_ERR_UNINIT                        (-2)  /*!< Module (or part of it) was not initialized properly */
+#define LL_ERR_INVD_PARAM                    (-3)  /*!< Provided parameter is not valid */
+#define LL_ERR_INVD_MD                       (-4)  /*!< Operation not allowed in current mode */
+#define LL_ERR_NOT_RDY                       (-5)  /*!< A requested final state is not reached */
+#define LL_ERR_BUSY                          (-6)  /*!< A conflicting or requested operation is still in progress */
+#define LL_ERR_ADDR_ALIGN                    (-7)  /*!< Address alignment does not match */
+#define LL_ERR_TIMEOUT                       (-8)  /*!< Time Out error occurred (e.g. I2C arbitration lost, Flash time-out, etc.) */
+#define LL_ERR_BUF_EMPTY                     (-9)  /*!< Circular buffer can not be read because the buffer is empty */
+#define LL_ERR_BUF_FULL                      (-10) /*!< Circular buffer can not be written because the buffer is full */
 /**
  * @}
  */
@@ -261,61 +259,61 @@ area of a module to a memory space in physical RAM. */
  * @defgroup Register_Macros Register Macros
  * @{
  */
-#define RW_MEM8(addr)                   (*(volatile uint8_t *)(addr))
-#define RW_MEM16(addr)                  (*(volatile uint16_t *)(addr))
-#define RW_MEM32(addr)                  (*(volatile uint32_t *)(addr))
+#define RW_MEM8(addr)                        (*(volatile uint8_t *)(addr))
+#define RW_MEM16(addr)                       (*(volatile uint16_t *)(addr))
+#define RW_MEM32(addr)                       (*(volatile uint32_t *)(addr))
 
-#define SET_REG_BIT(REG, BIT)           ((REG) |= (BIT))
-#define SET_REG8_BIT(REG, BIT)          ((REG) |= ((uint8_t)(BIT)))
-#define SET_REG16_BIT(REG, BIT)         ((REG) |= ((uint16_t)(BIT)))
-#define SET_REG32_BIT(REG, BIT)         ((REG) |= ((uint32_t)(BIT)))
+#define SET_REG_BIT(REG, BIT)                ((REG) |= (BIT))
+#define SET_REG8_BIT(REG, BIT)               ((REG) |= ((uint8_t)(BIT)))
+#define SET_REG16_BIT(REG, BIT)              ((REG) |= ((uint16_t)(BIT)))
+#define SET_REG32_BIT(REG, BIT)              ((REG) |= ((uint32_t)(BIT)))
 
-#define CLR_REG_BIT(REG, BIT)           ((REG) &= (~(BIT)))
-#define CLR_REG8_BIT(REG, BIT)          ((REG) &= ((uint8_t)(~((uint8_t)(BIT)))))
-#define CLR_REG16_BIT(REG, BIT)         ((REG) &= ((uint16_t)(~((uint16_t)(BIT)))))
-#define CLR_REG32_BIT(REG, BIT)         ((REG) &= ((uint32_t)(~((uint32_t)(BIT)))))
+#define CLR_REG_BIT(REG, BIT)                ((REG) &= (~(BIT)))
+#define CLR_REG8_BIT(REG, BIT)               ((REG) &= ((uint8_t)(~((uint8_t)(BIT)))))
+#define CLR_REG16_BIT(REG, BIT)              ((REG) &= ((uint16_t)(~((uint16_t)(BIT)))))
+#define CLR_REG32_BIT(REG, BIT)              ((REG) &= ((uint32_t)(~((uint32_t)(BIT)))))
 
-#define READ_REG_BIT(REG, BIT)          ((REG) & (BIT))
-#define READ_REG8_BIT(REG, BIT)         ((REG) & ((uint8_t)(BIT)))
-#define READ_REG16_BIT(REG, BIT)        ((REG) & ((uint16_t)(BIT)))
-#define READ_REG32_BIT(REG, BIT)        ((REG) & ((uint32_t)(BIT)))
+#define READ_REG_BIT(REG, BIT)               ((REG) & (BIT))
+#define READ_REG8_BIT(REG, BIT)              ((REG) & ((uint8_t)(BIT)))
+#define READ_REG16_BIT(REG, BIT)             ((REG) & ((uint16_t)(BIT)))
+#define READ_REG32_BIT(REG, BIT)             ((REG) & ((uint32_t)(BIT)))
 
-#define CLR_REG(REG)                    ((REG) = (0U))
-#define CLR_REG8(REG)                   ((REG) = ((uint8_t)(0U)))
-#define CLR_REG16(REG)                  ((REG) = ((uint16_t)(0U)))
-#define CLR_REG32(REG)                  ((REG) = ((uint32_t)(0UL)))
+#define CLR_REG(REG)                         ((REG) = (0U))
+#define CLR_REG8(REG)                        ((REG) = ((uint8_t)(0U)))
+#define CLR_REG16(REG)                       ((REG) = ((uint16_t)(0U)))
+#define CLR_REG32(REG)                       ((REG) = ((uint32_t)(0UL)))
 
-#define WRITE_REG(REG, VAL)             ((REG) = (VAL))
-#define WRITE_REG8(REG, VAL)            ((REG) = ((uint8_t)(VAL)))
-#define WRITE_REG16(REG, VAL)           ((REG) = ((uint16_t)(VAL)))
-#define WRITE_REG32(REG, VAL)           ((REG) = ((uint32_t)(VAL)))
+#define WRITE_REG(REG, VAL)                  ((REG) = (VAL))
+#define WRITE_REG8(REG, VAL)                 ((REG) = ((uint8_t)(VAL)))
+#define WRITE_REG16(REG, VAL)                ((REG) = ((uint16_t)(VAL)))
+#define WRITE_REG32(REG, VAL)                ((REG) = ((uint32_t)(VAL)))
 
-#define READ_REG(REG)                   (REG)
-#define READ_REG8(REG)                  (REG)
-#define READ_REG16(REG)                 (REG)
-#define READ_REG32(REG)                 (REG)
+#define READ_REG(REG)                        (REG)
+#define READ_REG8(REG)                       (REG)
+#define READ_REG16(REG)                      (REG)
+#define READ_REG32(REG)                      (REG)
 
-#define MODIFY_REG(REGS, CLRMASK, SETMASK)    (WRITE_REG((REGS), (((READ_REG(REGS)) & (~(CLRMASK))) | ((SETMASK) & (CLRMASK)))))
-#define MODIFY_REG8(REGS, CLRMASK, SETMASK)   (WRITE_REG8((REGS), (((READ_REG8((REGS))) & ((uint8_t)(~((uint8_t)(CLRMASK))))) | ((uint8_t)(SETMASK) & (uint8_t)(CLRMASK)))))
-#define MODIFY_REG16(REGS, CLRMASK, SETMASK)  (WRITE_REG16((REGS), (((READ_REG16((REGS))) & ((uint16_t)(~((uint16_t)(CLRMASK))))) | ((uint16_t)(SETMASK) & (uint16_t)(CLRMASK)))))
-#define MODIFY_REG32(REGS, CLRMASK, SETMASK)  (WRITE_REG32((REGS), (((READ_REG32((REGS))) & ((uint32_t)(~((uint32_t)(CLRMASK))))) | ((uint32_t)(SETMASK) & (uint32_t)(CLRMASK)))))
-/**
+#define MODIFY_REG(REGS, CLRMASK, SETMASK)   (WRITE_REG((REGS), (((READ_REG(REGS)) & (~(CLRMASK))) | ((SETMASK) & (CLRMASK)))))
+#define MODIFY_REG8(REGS, CLRMASK, SETMASK)  (WRITE_REG8((REGS), (((READ_REG8((REGS))) & ((uint8_t)(~((uint8_t)(CLRMASK))))) | ((uint8_t)(SETMASK) & (uint8_t)(CLRMASK)))))
+#define MODIFY_REG16(REGS, CLRMASK, SETMASK) (WRITE_REG16((REGS), (((READ_REG16((REGS))) & ((uint16_t)(~((uint16_t)(CLRMASK))))) | ((uint16_t)(SETMASK) & (uint16_t)(CLRMASK)))))
+#define MODIFY_REG32(REGS, CLRMASK, SETMASK) (WRITE_REG32((REGS), (((READ_REG32((REGS))) & ((uint32_t)(~((uint32_t)(CLRMASK))))) | ((uint32_t)(SETMASK) & (uint32_t)(CLRMASK)))))
+    /**
  * @}
  */
 
-/**
+    /**
  * @}
  */
 
-/*******************************************************************************
+    /*******************************************************************************
  * Global variable definitions ('extern')
  ******************************************************************************/
 
-/*******************************************************************************
+    /*******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
 
-/**
+    /**
  * @}
  */
 

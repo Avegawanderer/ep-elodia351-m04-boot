@@ -19,110 +19,105 @@
 #ifndef __DH_TYPE_H__
 #define __DH_TYPE_H__
 
-
 #ifdef __cplusplus
 #if __cplusplus
-extern "C"{
+extern "C"
+{
 #endif
 #endif /* __cplusplus */
 
-/*----------------------------------------------*
+    /*----------------------------------------------*
  * The common data type, will be used in the whole project.*
  *----------------------------------------------*/
 
-typedef unsigned char           DH_U8;
-typedef unsigned short          DH_U16;
-typedef unsigned int            DH_U32;
+    typedef unsigned char DH_U8;
+    typedef unsigned short DH_U16;
+    typedef unsigned int DH_U32;
 
-typedef signed char             DH_S8;
-typedef short                   DH_S16;
-typedef int                     DH_S32;
+    typedef signed char DH_S8;
+    typedef short DH_S16;
+    typedef int DH_S32;
 
 #ifndef _M_IX86
-    typedef unsigned long long  DH_U64;
-    typedef long long           DH_S64;
+    typedef unsigned long long DH_U64;
+    typedef long long DH_S64;
 #else
-    typedef __int64             DH_U64;
-    typedef __int64             DH_S64;
+typedef __int64 DH_U64;
+typedef __int64 DH_S64;
 #endif
 
-typedef char                    DH_CHAR;
-typedef void                    DH_VOID;
+    typedef char DH_CHAR;
+    typedef void DH_VOID;
 
+    typedef float DH_F32;
+    typedef double DH_F64;
 
-typedef float                   DH_F32;
-typedef double                  DH_F64;
+    typedef unsigned char uint8;
+    typedef signed char int8;
+    typedef unsigned short uint16;
+    typedef signed short int16;
+    typedef unsigned int uint32;
+    typedef signed int int32;
+    typedef float fp32;
+    typedef double fp64;
 
+    typedef unsigned char u8;
+    typedef signed char s8;
+    typedef unsigned short u16;
+    typedef volatile unsigned short vu16;
+    typedef signed short s16;
+    typedef unsigned int u32;
+    typedef signed int s32;
 
+    typedef struct _str_pointer
+    {
+        DH_U16 row;
+        DH_U16 col;
 
-typedef unsigned char uint8;                   // 无符号8位整型变量
-typedef signed char int8;                    // 有符号8位整型变量
-typedef unsigned short uint16;                  // 无符号16位整型变量
-typedef signed short int16;                   // 有符号16位整型变量
-typedef unsigned int uint32;                  // 无符号32位整型变量
-typedef signed int int32;                   // 有符号32位整型变量
-typedef float fp32;                    // 单精度浮点数（32位长度）
-typedef double fp64;                    // 双精度浮点数（64位长度）
+    } STR_POINTER;
 
-
-
-typedef unsigned char u8;                   // 无符号8位整型变量
-typedef signed char s8;                    // 有符号8位整型变量
-typedef unsigned short u16;                  // 无符号16位整型变量
-typedef volatile unsigned short vu16;                  // 无符号16位整型变量
-typedef signed short s16;                   // 有符号16位整型变量
-typedef unsigned int u32;                  // 无符号32位整型变量
-typedef signed int s32;                   // 有符号32位整型变量
-
-
-typedef struct _str_pointer {
-	DH_U16 row;
-	DH_U16 col;
-
-}STR_POINTER;
-
-
-/*----------------------------------------------*
+    /*----------------------------------------------*
  * const defination                             *
  *----------------------------------------------*/
-typedef enum {
-    DH_FALSE = 0,
-    DH_TRUE  = 1,
-} DH_BOOL;
+    typedef enum
+    {
+        DH_FALSE = 0,
+        DH_TRUE = 1,
+    } DH_BOOL;
 
-typedef enum {
-	DH_ELEC_VL = 0,
-	DH_ELEC_VH = 1,
-} DH_ELEC_LEVEL;
+    typedef enum
+    {
+        DH_ELEC_VL = 0,
+        DH_ELEC_VH = 1,
+    } DH_ELEC_LEVEL;
 
 #ifndef NULL
-    #define NULL    0L
+#define NULL 0L
 #endif
 
 #define DH_NULL     0L
 #define DH_SUCCESS  0
 #define DH_FAILURE  (-1)
-#define DH_ETIMEOUT  (-2)        /* 等待超时*/
-#define DH_EINTR     (-3)        /* 被信号中断*/
+#define DH_ETIMEOUT (-2)
 
+#define DH_EINTR    (-3)
 
 #ifndef TRUE
-#define TRUE  0x01
+#define TRUE 0x01
 #endif
 #ifndef FALSE
 #define FALSE 0x00
 #endif
 
-#define BITSET(n)  (0x01L << (n))
-#define BITCLR(n)  (~(0x01L << (n)))
- 
+#define BITSET(n) (0x01L << (n))
+#define BITCLR(n) (~(0x01L << (n)))
 
-typedef struct _listmng{
-	DH_U16 size;
-	DH_U16 valid;
-	DH_U8 *grp;
-}LIST_MG_STR;
-
+    typedef struct _listmng
+    {
+        DH_U16 size;
+        DH_U16 valid;
+        DH_U8 *grp;
+    } LIST_MG_STR;
 
 #ifdef __cplusplus
 #if __cplusplus
@@ -131,5 +126,3 @@ typedef struct _listmng{
 #endif /* __cplusplus */
 
 #endif /* __DH_TYPE_H__ */
-
-
