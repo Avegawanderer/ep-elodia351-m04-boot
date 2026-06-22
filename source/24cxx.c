@@ -1,26 +1,3 @@
-/**
- *******************************************************************************
- * @file  24cxx.c
- * @brief This midware file provides firmware functions to 24cxx EEPROM.
- @verbatim
-   Change Logs:
-   Date             Author          Notes
-   2022-03-31       CDT             First version
- @endverbatim
- *******************************************************************************
- * Copyright (C) 2022-2023, Xiaohua Semiconductor Co., Ltd. All rights reserved.
- *
- * This software component is licensed by XHSC under BSD 3-Clause license
- * (the "License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                    opensource.org/licenses/BSD-3-Clause
- *
- *******************************************************************************
- */
-
-/*******************************************************************************
- * Include files
- ******************************************************************************/
 #include "app_config.h"
 #include "24cxx.h"
 
@@ -128,7 +105,3 @@ void FLASH_INTF_ReadStr(uint16 address, uint8 *e2prom_buf, uint16 length)
 
     EepromUnlock();
 }
-
-/*******************************************************************************
- * EOF (not truncated)
- ******************************************************************************/

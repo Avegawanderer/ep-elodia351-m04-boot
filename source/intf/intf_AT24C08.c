@@ -1,24 +1,3 @@
-/*******************************************************************************
- * Copyright (C) 2020, Huada Semiconductor Co., Ltd. All rights reserved.
- *
- * This software component is licensed by HDSC under BSD 3-Clause license
- * (the "License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                    opensource.org/licenses/BSD-3-Clause
- */
-/******************************************************************************/
-/** \file main.c
- **
- ** \brief Bl24c256 write and read example.
- **
- **   - 2021-04-16  CDT First version for Device Driver Library example
- **                      for E2PROM Bl24c256
- **
- ******************************************************************************/
-
-/*******************************************************************************
- * Include files
- ******************************************************************************/
 #include "app_config.h"
 
 /*******************************************************************************
@@ -308,7 +287,3 @@ void AT24Cxx_Init(void)
     //printk("%d %d\r\n",i,buff[i]);
     //	}
 }
-
-/*******************************************************************************
- * EOF (not truncated)
- ******************************************************************************/

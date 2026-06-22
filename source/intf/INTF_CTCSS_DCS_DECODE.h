@@ -1,14 +1,3 @@
-/*******************************************************************
-  Filename:       CTCSS_DCS_DECODE.h
-  Revised:        $Date: 2009-10-18 $
-  Revision:       $ $
-  Author:         cykang
-
-  Description:
-
-  Change History:
-
-********************************************************************/
 #if 1    //(FM_DECODE_SEL==NEW_DECODE_TYEP_ADC)
 
 #ifndef _INTF_CTCSS_DCS_DECODE_H

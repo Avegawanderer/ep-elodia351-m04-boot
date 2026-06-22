@@ -1,29 +1,3 @@
-/******************************************************************************
-*
- * Copyright (C) 2020, Huada Semiconductor Co., Ltd. All rights reserved.
- *
- * This software component is licensed by HDSC under BSD 3-Clause license
- * (the "License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                    opensource.org/licenses/BSD-3-Clause
- */
-/******************************************************************************/
-
-/** \file main.c
- **
- ** \brief efm sample
- **
- **   - 2021-04-16  CDT  First version for Device Driver Library of
- **     efm
- **
- 
-******************************************************************************/
-
-/******************************************************************************
-*
- * Include files
- 
-******************************************************************************/
 #include "app_config.h"
 
 /******************************************************************************
@@ -308,9 +282,3 @@ int32_t EFM_Program(uint32_t u32Addr, uint8_t *pu8Buf, uint32_t u32Len)
     Delay_ms(5);
     return i32Ret;
 }
-
-/******************************************************************************
-*
- * EOF (not truncated)
- 
-******************************************************************************/

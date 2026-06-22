@@ -1,19 +1,3 @@
-/******************************************************************************  
- Copyright (C), 2014-2020, ZheJiang Dahua Technology CO.,LTD.
- ******************************************************************************
- File Name     : dh_drv_adc.c
- Version       : Initial Draft
- Author        : yu_feng1<yu_feng1@dahuatech.com>
- Created       : 2014.3.17
- Last Modified :
- Description   : define the Mcu of AD code
- Function List :
- DHstory       :
- 1.Date        : 2014/3/17
- Author      : 24538
- Modification: Create
- ******************************************************************************/
-
 #include "app_config.h"
 #include "BLL_PC.h"
 #include "app_menu.h"

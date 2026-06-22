@@ -1,25 +1,3 @@
-/**
- *******************************************************************************
- * @file  hc32_ll_def.h
- * @brief This file contains LL common definitions: enumeration, macros and
-  *       structures definitions.
- @verbatim
-   Change Logs:
-   Date             Author          Notes
-   2022-03-31       CDT             First version
-   2023-01-15       CDT             Implemented the definition of __NO_INIT for AC6 and ARM Compiler
-   2023-01-15       CDT             ARM Compiler suppress warning message: diag_1296
- @endverbatim
- *******************************************************************************
- * Copyright (C) 2022-2023, Xiaohua Semiconductor Co., Ltd. All rights reserved.
- *
- * This software component is licensed by XHSC under BSD 3-Clause license
- * (the "License"); You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                    opensource.org/licenses/BSD-3-Clause
- *
- *******************************************************************************
- */
 #ifndef __HC32_LL_DEF_H__
 #define __HC32_LL_DEF_H__
 
@@ -322,7 +300,3 @@ area of a module to a memory space in physical RAM. */
 #endif
 
 #endif /* __HC32_LL_DEF_H__ */
-
-/*******************************************************************************
- * EOF (not truncated)
- ******************************************************************************/

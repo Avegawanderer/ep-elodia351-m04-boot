@@ -1,4 +1,3 @@
-//SysCfgMac.h
 #ifndef __SYS_CONFIG_MAC_H__
 #define __SYS_CONFIG_MAC_H__
 

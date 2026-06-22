@@ -1,21 +1,3 @@
-/******************************************************************************
-
-  Copyright (C), 2014-2020, ZheJiang Dahua Technology CO.,LTD.
-
- ******************************************************************************
-  File Name     : dh_type.h
-  Version       : Initial Draft
-  Author        : Lv Zhuqing<lv_zhuqing@dahuatech.com>
-  Created       : 2014.3.13
-  Last Modified :
-  Description   : The common data type defination
-  Function List :
-  DHstory       :
-  1.Date        : 2014/3/13
-    Author      : 24497
-    Modification: Create
-******************************************************************************/
-
 #ifndef __DH_TYPE_H__
 #define __DH_TYPE_H__
 

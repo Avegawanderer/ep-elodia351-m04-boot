@@ -1,12 +1,3 @@
-/***************************************************************/
-/*  @filename:           printk.c									     */
-/*  @Description:       format the wanted string to a bufer				     */
-/*  @usage:               printk(*fmt); 								     */
-/*  @register the console first:  register_console(your_write_console)  	     */
-/*  @type:    int (*your_write_console)(char)					            */
-/*  @define a global buffer called :  char printk_buf[NUMER] somewhere      */
-/***************************************************************/
-
 #include "app_config.h"
 #include "lib_print.h"
 #include "app_menu.h"
